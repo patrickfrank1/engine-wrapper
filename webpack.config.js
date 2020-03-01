@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   externals: {
-    "./ext/ext.js" : "globalHello"
+    "./ext/stockfish.js" : "Stockfish"
   },
   optimization: {
     minimize: true,
@@ -31,9 +31,16 @@ module.exports = {
       filename: 'index.html'
     }),
     new CopyWebpackPlugin([
-      { 
-        from: path.resolve(__dirname,"src/ext")+'/ext.js',
-        to: './ext/ext.js',
+      { from: path.resolve(__dirname,"node_modules/stockfish.wasm")+'/stockfish.js',
+        to: './ext/stockfish.js',
+        toType: 'file'
+      },
+      { from: path.resolve(__dirname,"node_modules/stockfish.wasm")+'/stockfish.wasm',
+        to: './ext/stockfish.wasm',
+        toType: 'file'
+      },
+      { from: path.resolve(__dirname,"node_modules/stockfish.wasm")+'/stockfish.worker.js',
+        to: './ext/stockfish.worker.js',
         toType: 'file'
       }
     ])

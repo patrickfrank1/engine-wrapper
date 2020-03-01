@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "stockfish.wasm": "^0.6.1"
   }
 }

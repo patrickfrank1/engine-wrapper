@@ -10,6 +10,7 @@ module.exports = {
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
+    Stockfish: 'writable'
   },
   parserOptions: {
     ecmaVersion: 2018,
