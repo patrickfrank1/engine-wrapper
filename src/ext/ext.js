@@ -1,1 +1,0 @@
-var globalHello = "Hello says the external library";

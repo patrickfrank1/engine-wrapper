@@ -1,7 +1,10 @@
-module.exports.test = function () {
-  global.s.addMessageListener((line) => {
+module.exports.test = function test() {
+  const sf = new global.StockfishFactory();
+
+  sf.addMessageListener((line) => {
     console.log(line);
   });
 
-  global.s.postMessage('uci');
+  sf.postMessage('uci');
+  sf.postMessage('go depth 15');
 };
