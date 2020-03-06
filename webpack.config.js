@@ -9,7 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/entry.js',
+  entry: './src/js/entry_browser.js',
   output: {
     filename: 'entry.js',
     path: path.resolve(__dirname, 'dist')

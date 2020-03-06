@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Implements a unified API for javascript chess engines such as stockfish.js and lc0.js",
   "private": true,
-  "main": "server.js",
-  "browser": "./dist/index.html",
+  "main": "src/js/entry_node.js",
+  "browser": {
+    "stockfish.wasm": false
+  },
   "engines": {
     "node": "12.14.x",
     "npm": "6.13.x"
